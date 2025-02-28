@@ -12,14 +12,14 @@ jobs:
       name: Flutter-Linux-Arm64
       runs-on: ubuntu-22.04-arm
     
-    steps:
-      - uses: actions/checkout@v4
-        name: Repository checkout
-        with:
-          fetch-depth: 0
-          submodules: true
-          path: git
+      steps:
+        - uses: actions/checkout@v4
+          name: Repository checkout
+          with:
+            fetch-depth: 0
+            submodules: true
+            path: git
 
-      - name: Run fluttter doctor
-        run: |
-          ./git/flutter/bin/flutter doctor
+        - name: Run fluttter doctor
+          run: |
+            ./git/flutter/bin/flutter doctor
