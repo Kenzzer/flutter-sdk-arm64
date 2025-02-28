@@ -22,6 +22,7 @@ jobs:
 
         # Only here so it doesn't whine about it being missing when running "doctor"
         - run: |
+            sudo apt update
             sudo apt install libgtk-3-dev
 
         - name: Run fluttter doctor
