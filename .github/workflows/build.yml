@@ -29,8 +29,12 @@ jobs:
           run: |
             ./git/flutter/bin/flutter doctor
 
+        - run: tar -cvzf flutter.tar.gz ./git/flutter
+
         - name: Upload artifact
           uses: actions/upload-artifact@v4
           with:
             name: flutter_sdk_arm64_${{ runner.os }}
-            path: ${{ github.workspace }}/git
+            path: ${{ github.workspace }}/flutter.tar.gz
+            compression-level: 9
+            include-hidden-files: true
